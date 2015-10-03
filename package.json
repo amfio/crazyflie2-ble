@@ -1,0 +1,25 @@
+{
+  "author": "Alexander Field <alexandermfield@gmail.com>",
+  "description": "A NodeJS Bluetooth LE library for controlling the Crazyflie 2 quadcopter",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amfio/crazyflie2-ble"
+  },
+  "bugs": {
+    "url": "https://github.com/amfio/crazyflie2-ble/issues"
+  },
+  "keywords": [
+    "crazyflie",
+    "crazyflie 2",
+    "quadcopter",
+    "bluetooth",
+    "BLE"
+  ],
+  "main": "./crazyflie.js",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "bufferpack": "0.0.6",
+    "noble": "^1.1.0"
+  }
+}
