@@ -32,10 +32,8 @@ function Crazyflie(peripheral, characteristic) {
   }
 
   _this.disconnect = function () {
-    console.log('dsiconnect');
     stopUpdates();
     peripheral.removeAllListeners();
-
     _this.emit('disconnect');
   };
 
