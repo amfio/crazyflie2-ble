@@ -11,6 +11,7 @@ Install the dependencies
 ## Usage
 ### Connecting the Crazyflie 2
 You can eiter use promises:
+
 	var CF2 = require('crazyflie2-ble');
 
 	CF2.getConnection().then(function (crazyflie) {
@@ -20,6 +21,7 @@ You can eiter use promises:
 	});
 
 Or you can use callbacks:
+
 	var CF2 = require('crazyflie2-ble');
 
 	CF2.getConnection(function (error, crazyflie) {
