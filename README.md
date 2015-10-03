@@ -4,14 +4,18 @@ A [NodeJS](https://nodejs.org) library for communicating with [Crazyflie 2.0](ht
 
 ## Installation
 Clone the repository into your 'node_modules' folder.
+
 `git clone https://github.com/amfio/crazyflie2-ble
+
 Install the dependencies
+
 `npm install
 
 ## Usage
 ### Connecting the Crazyflie 2
 You can eiter use promises:
 
+```javascript
 	var CF2 = require('crazyflie2-ble');
 
 	CF2.getConnection().then(function (crazyflie) {
@@ -19,9 +23,11 @@ You can eiter use promises:
 	}).catch(function (error) {
 		// Something went wrong :(
 	});
+```
 
 Or you can use callbacks:
 
+```javascript
 	var CF2 = require('crazyflie2-ble');
 
 	CF2.getConnection(function (error, crazyflie) {
@@ -32,13 +38,18 @@ Or you can use callbacks:
 			// Communicate with quadcopter
 		}
 	});
+```
 
 ### Controlling the Crazyflie 2
 `setThrust(thrust)
+
 `setYaw(yaw)
+
 `setRoll(roll)
+
 `setPitch(pitch)
 
+```javascript
 	var CF2 = require('crazyflie2-ble');
 
 	CF2.getConnection().then(function (crazyflie) {
@@ -50,3 +61,4 @@ Or you can use callbacks:
 	}).catch(function (error) {
 		// Something went wrong :(
 	});
+```
