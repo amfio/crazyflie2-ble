@@ -5,11 +5,11 @@ A [NodeJS](https://nodejs.org) library for communicating with [Crazyflie 2.0](ht
 ## Installation
 Clone the repository into your 'node_modules' folder.
 
-`git clone https://github.com/amfio/crazyflie2-ble
+`git clone https://github.com/amfio/crazyflie2-ble`
 
 Install the dependencies
 
-`npm install
+`npm install`
 
 ## Usage
 ### Connecting the Crazyflie 2
@@ -41,13 +41,13 @@ Or you can use callbacks:
 ```
 
 ### Controlling the Crazyflie 2
-`setThrust(thrust)
+`setThrust(thrust)`
 
-`setYaw(yaw)
+`setYaw(yaw)`
 
-`setRoll(roll)
+`setRoll(roll)`
 
-`setPitch(pitch)
+`setPitch(pitch)`
 
 ```javascript
 	var CF2 = require('crazyflie2-ble');
