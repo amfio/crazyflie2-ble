@@ -43,15 +43,25 @@ CF2.getConnection(function (error, crazyflie) {
 
 `setPitch(pitch)`
 
+
+Don't forget that you need to initially set the thrust to zero before you can take control of the quadcopter. This is a safety mechanism built into the Crazyflie itself to make sure your quadcopter doesn't immediately fly off as soon as you turn the quadcopter on!
+
 ```javascript
 var CF2 = require('crazyflie2-ble');
 
 CF2.getConnection().then(function (crazyflie) {
-  crazyflie.setThrust(20000);
+  // initially set the thrust to zero - this must always be done before any flying can commence
+  crazyflie.setThrust(0);
+  
+  // after 1 second, set the thrust to 20000 (about 30% power)
+  setTimeout(function () {
+    crazyflie.setThrust(2000);
+  }, 1000);
 
+  // after further 2 seconds (total of 3 seconds), set the thrust back to 0
   setTimeout(function () {
     crazyflie.setThrust(0);
-  }, 2000)
+  }, 3000);
 }).catch(function (error) {
   // Something went wrong :(
 });
